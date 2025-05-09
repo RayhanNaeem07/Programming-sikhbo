@@ -34,7 +34,6 @@ const Navbar = () => {
 
         <ul className="hidden md:flex space-x-4 md:space-x-6 ">
           <li>
-       
             <Link
               to={"/"}
               onClick={() => handleLinkClick("/")}
@@ -47,7 +46,6 @@ const Navbar = () => {
           </li>
 
           <li>
-       
             <Link
               to={"/products"}
               onClick={() => handleLinkClick("/products")}
@@ -62,12 +60,13 @@ const Navbar = () => {
           </li>
 
           <li>
-      
             <Link
               to={"/blogs"}
               onClick={() => handleLinkClick("/blogs")}
               className={`${
-                activeLink === "/blogs" ? "text-gray-600" : "hover:text-gray-600"
+                activeLink === "/blogs"
+                  ? "text-gray-600"
+                  : "hover:text-gray-600"
               }`}
             >
               Blogs
@@ -75,7 +74,6 @@ const Navbar = () => {
           </li>
 
           <li>
-         
             <Link
               to={"/contact"}
               onClick={() => handleLinkClick("/contact")}
@@ -90,21 +88,24 @@ const Navbar = () => {
           </li>
 
           <li>
-         
             <Link
               to={"/about"}
               onClick={() => handleLinkClick("/about")}
               className={`${
-                activeLink === "/about" ? "text-gray-600" : "hover:text-gray-600"
+                activeLink === "/about"
+                  ? "text-gray-600"
+                  : "hover:text-gray-600"
               }`}
             >
               About
             </Link>
           </li>
         </ul>
-        <button className="hidden md:block bg-blue-600 px-4 py-2 rounded cursor-pointer">
-          Login
-        </button>
+        <Link to={"/login"}>
+          <button className="hidden md:block bg-blue-600 px-4 py-2 rounded cursor-pointer">
+            Login
+          </button>
+        </Link>
 
         {/* Mobile menu collapse */}
         <div
